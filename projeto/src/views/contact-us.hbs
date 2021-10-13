@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entre em contato | LoQuadra</title>
+  <link rel="shortcut icon" href="/images/map-marker.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/map.css">
+  <link rel="stylesheet" href="/css/form.css">
+  <link rel="stylesheet" href="/css/buttons.css">
+  <link rel="stylesheet" href="/css/page-create-quadra.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+</head>
+
+<body>
+  <div id="page-create-quadra">
+    <aside class="animate-right sidebar">
+      <img src="/images/map-marker.svg" alt="Happy">
+
+      <footer>
+        <button onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar">
+        </button>
+      </footer>
+    </aside>
+
+    <main class="animate-appear with-sidebar">
+      <form action="email" method="POST">
+        <fieldset>
+          <legend>Entre em contato, enviei uma mensagem</legend>
+
+          <div class="input-block">
+            <label for="input_name" form="id_form">Nome: </label>
+            <input id="name" name="name" type="text" id="input_name">
+          </div>
+
+          <div class="input-block">
+            <label for="input_ddd" form="id_form">DDD: </label>
+            <input type="tel" id="input_ddd" pattern="[0-9]{2}" placeholder="XX">
+          </div>
+
+          <div class="input-block">
+            <label for="input_tel" form="id_form">Celular: </label>
+            <input type="tel" id="input_tel" pattern="[0-9]{5}-[0-9]{4}" placeholder="XXXXXX-XXX">
+          </div>
+
+          <div class="input-block">
+            <label for="input_email" form="id_form">E-mail: </label>
+            <input id="email" name="email" type="email" id="input_email" placeholder="nome@servidor.com.br">
+          </div>
+
+          <div class="input-block">
+            <label for="textarea" form="id_form">Mensagem:</label>
+            <textarea id="message" name="message"
+              id="textarea" 
+              rows="5" 
+              cols="175" 
+              placeholder="Conte aqui o motivo do seu contato para que a gente possa lhe ajudar.">
+            </textarea>
+          </div>
+
+            <button type="submit" class="primary-button">Confirmar</button>
+        </fieldset>
+      </form>
+    </main>
+  </div>
+
+  <script src="/scripts/contact.js"></script>
+</body>
+
+</html>

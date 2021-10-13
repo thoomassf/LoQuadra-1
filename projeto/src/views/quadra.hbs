@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{quadra.name}} | Happy</title>
+    <link rel="shortcut icon" href="/images/map-marker.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/page-quadra.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <div id="page-quadra">
+        <aside class="animate-right sidebar">
+            <img src="/images/map-marker.svg" alt="Happy">
+
+            <footer>
+                <button onclick="history.back()">
+                    <img src="/images/arrow-back.svg" alt="Voltar">
+                </button>
+            </footer>
+        </aside>
+
+        <main class="animate-appear with-sidebar">
+            <div class="quadra-details">
+                <img src="{{quadra.firstImage}}" alt="{{quadra.name}}">
+
+                <div class="images">
+                    {{#each quadra.images}}
+                    <button type="button" onclick="selectImage(event)" class="active">
+                        <img src="{{this}}" alt="{{quadra.name}}">
+                    </button>
+                    {{/each}}
+                </div>
+
+                <div class="quadra-details-content">
+                    <h1>{{quadra.name}}</h1>
+
+                    <p>Tipo de quadra: {{quadra.type_block}}</p>
+
+                    <p>{{quadra.about}}</p>
+
+                    <div class="map-container">
+                        <div id="mapid"></div>
+                        <span data-lat="{{quadra.lat}}" data-lng="{{quadra.lng}}"></span>
+
+                        <footer>
+                            <a href="https://maps.google.com/mobile?q={{quadra.lat}},{{quadra.lng}}&z=15"
+                                target="_blank">Ver rotas no Google Maps</a>
+                        </footer>
+                    </div>
+
+                    <hr>
+
+                    <h2>Informações de endereço</h2>
+                    <p>{{quadra.street}}, {{quadra.number}} - {{quadra.district}}</p>
+                    <p>{{quadra.city}} - {{quadra.state}}, CEP: {{quadra.cep}}</p>
+
+                    <hr>
+
+                    <h2>Instruções para visita</h2>
+                    <p>Email: {{quadra.email}}</p>
+                    <p>Telefone: {{quadra.telephone}}</p>
+
+                    <div class="open-details">
+                        <div class="hour">
+                            <img src="/images/clock.svg" alt="Horários">
+                            {{quadra.opening_hours}} <br>
+                            {{quadra.price_hour}}
+                        </div>
+
+                        {{#if quadra.open_on_weekends}}
+                        <div class="open-on-weekends open">
+                            <img src="/images/info.svg" alt="Informações">
+                            Atendemos fim de semana
+                        </div>
+                        {{else}}
+                        <div class="open-on-weekends closed">
+                            <img src="/images/info-red.svg" alt="Informações">
+                            Não atendemos fim de semana
+                        </div>
+                        {{/if}}
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{quadra.whatsapp}}&text=Oi, quero conversar sobre visitas no {{quadra.name}}"
+                        type="button" class="primary-button" target="_blank">
+                        <img src="/images/whatsapp.svg" alt="Chamar no WhatsApp">
+                        Entrar em contato
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/scripts/page-quadra.js"></script>
+</body>
+
+</html>

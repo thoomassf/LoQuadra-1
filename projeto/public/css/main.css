@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: var(--white);
+  background: var(--background);
+}
+
+:root {
+  /* variaveis das cores*/
+  --color-primary: #780116;
+  --color-secondary: #C32F27;
+  --color-secondary-light: #D8572A;
+  --color-tertiary: #FEBD59;
+  --button: #F7B538;
+  --button-hover: #FAAB32;
+  --background: #f0e8e0;
+  --text: #333333;
+  --white: #FFFFFF;
+
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+textarea {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+button, a {
+  cursor: pointer;
+}

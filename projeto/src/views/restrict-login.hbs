@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | LoQuadra</title>
+  <link rel="icon" href="/images/map-marker.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!--Estilos css-->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/restrict.css" />
+  <link rel="stylesheet" href="/css/inputs.css" />
+  <link rel="stylesheet" href="/css/login-formarea.css">
+  <link rel="stylesheet" href="/css/login-sidebar.css" />
+</head>
+<body>
+  <div id="page-restrict">
+    <div class="content-wrapper">
+      <aside class="login-side-bar">
+        <img src="/images/logo.svg" alt="LoQuadra logo">
+
+        <div class="locations">
+          <strong>Brasil</strong>
+          <span>Buscando felicidade em todo solo brasileiro.</span>
+        </div>
+      </aside>
+
+      <div class="login-card">
+        <div class="login-area">
+          <form action="loginUser" method="POST" class="login-form">
+            <fieldset>
+              <legend>Entrar</legend>
+              <a href="/cadastrate" class="cadastrate">
+                Cadastre-se
+              </a>
+
+              <div class="input-area">
+                <div class="input-block">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" type="email" value="" onchange="">
+                </div>
+                <div class="input-block">
+                  <label for="password">Password</label>
+                  <input id="password" name="password" type="password" value="" onchange="">
+                </div>
+
+                <div class="help-area">
+                  <div class="checkbox-block">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Lembre-se</label>
+                  </div>
+                  <a href="/forgot-login" class="forgot-password">
+                    Esqueci minha senha
+                  </a>
+                </div>
+              </div>
+            </fieldset>
+            
+            <button type="submit" class="login-button">Entrar</button>
+          </form>
+        </div>
+
+        <a href="/" class="button-back">
+          <img src="/images/arrow-back.svg" alt="Botão para voltar à home">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

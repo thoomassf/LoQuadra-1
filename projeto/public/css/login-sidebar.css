@@ -1,0 +1,68 @@
+/* Customização do sidebar das telas de Login, Cadastre, Recuperar senha*/
+
+.login-side-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-side-bar .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5.625rem;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+}
+
+.login-side-bar .location strong {
+  font-weight: bold;
+}
+
+/* Customização do sidebar da tela de Dashboard*/
+
+.dashboard-side {
+  position: fixed;
+  background: linear-gradient(329.54deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  height: 100%;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-side .dashboard-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dash-button + .dash-button {
+  margin-top: 0.75rem;
+}
+
+.dash-button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.25rem;
+  background: var(--color-secondary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.dash-button:hover, .dash-button .active {
+  background: var(--color-secondary-light);
+}
+
+.dash-button img {
+  width: 3rem;
+  height: 3rem;
+}

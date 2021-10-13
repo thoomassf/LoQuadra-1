@@ -1,0 +1,137 @@
+#page-registred {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#page-registred .content-wapper {
+  display: flex;
+}
+
+#page-registred .registred-quadras {
+  max-width: 1300px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#page-registred .registred-quadras .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid var(--color-secondary);
+  padding: 60px 0 30px 0;
+}
+
+#page-registred .registred-quadras .info h1 {
+  color: var(--color-primary);
+}
+
+#page-registred .registred-quadras .info p {
+  color: var(--color-primary);
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+}
+
+.cards-wrapper .no-orph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+
+  width: 49%;
+
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.123);
+
+  margin-top: 20px;
+}
+
+.card .leaflet-container {
+  border-radius: 20px;
+}
+
+.card h2 {
+  color: var(--color-secondary);
+}
+
+.card .card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+}
+.card .card-info .card-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-btn + .card-btn {
+  margin-left: 10px;
+}
+
+.card-btn {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+
+  background: var(--color-tertiary);
+  color: #15c3d6;
+
+  border: none;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+.card-btn:hover {
+  background: var(--button-hover);
+  color: #37c77f;
+}
+
+.grafico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  padding-bottom: 6rem;
+}
+
+.home-back {
+  right: 4rem;
+  bottom: 4rem;
+  z-index: 10;
+  width: 6.4rem;
+  height: 6.4rem;
+  background: var(--color-secondary);
+  border: 0;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 200ms;
+}
+
+.home-back:hover {
+  background-color: var(--color-secondary-light);
+}

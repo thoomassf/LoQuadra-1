@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | LoQuadra</title>
+  <link rel="icon" href="/images/map-marker.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!--Estilos css-->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/login-sidebar.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+</head>
+<body>
+  <div id="page-registred">
+    <aside class="dashboard-side">
+      <img src="/images/map-marker.svg" alt="Logo">
+      <!--
+      <div class="dashboard-buttons">
+        <a href="#" class="dash-button">
+          <img src="/images/location.svg" alt="Botão do mapa">
+        </a>
+
+          <a href="#" class="dash-button">
+          <img src="/images/alert-icon.svg" alt="Botão de alerta">
+        </a>
+
+          <a href="#" class="dash-button">
+          <img src="/images/edit-icon.svg" alt="Botão de editar">
+        </a>
+      </div>
+      --> 
+      <a href="/quadras" class="home-back">
+        <img src="/images/arrow-back.svg" alt="Voltar para a home">               
+      </a>
+    </aside>
+
+    <div class="content-wrapper"></div>
+      <main class="dashboard-main">
+        <div class="registred-quadras">
+          <div class="info">
+            <h1>Quadras Cadastradas</h1>
+              <p>{{quadras.length}}</p>
+          </div>
+          <div class="cards-wrapper">
+            
+            {{#each quadras}}
+              <div class="card" style="width: 100%;">
+              
+              <div class="map-container">
+                <div id="mapid"></div>
+
+                <input type="hidden" name="lat">
+                <input type="hidden" name="lng">
+              </div>
+              
+              <div class="card-info"> 
+                <h2>{{this.name}}</h2>
+
+                <div class="card-buttons">
+                  <a href="/quadra?id={{this.id}}" class="card-btn">
+                    <img src="/images/eye.svg" alt="Botão para ver mais detalhes da quadra">
+                  </a>
+                  <form action="delete_quadra" method="POST">
+                  
+                     <input id="id" name="id" type="label" value={{this.id}} onchange="" hidden></input>
+                  
+                    <button type="submit" class="card-btn">
+                      <img src="/images/trash.svg" alt="Botão para apagar uma quadra">
+                    </button>
+                 </form>    
+                  
+                </div>
+              </div>
+            </div>
+            {{/each}}
+                  
+          </div>
+
+          <div class="info">
+            <h1>Gráfico de pizza da quantidade de quadras por tipo de quadra</h1>
+            <p>1</p>
+          </div>
+
+          <div class="grafico">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSV5auTvRrYkzoBR7kSbQzF4qJ5MO6JZr5FNimaWxJvAk_nUPfhvcpTbrcJIAeiRCcm2-weyiXScP_Y/pubhtml?gid=1098598006&single=true" name=conteudo width=580 height=800 border="0" frameborder="0"></iframe>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

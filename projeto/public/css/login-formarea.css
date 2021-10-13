@@ -1,0 +1,69 @@
+.login-card {
+  width: 40%;
+  height: 100vh;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-card .login-area {
+  width: 400px;
+}
+
+.login-card .login-area legend {
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 34px;
+}
+
+.login-card .login-area .cadastrate {
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 1.7rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.login-card .login-area .cadastrate:hover {
+  color: var(--color-secondary-light);
+}
+
+.login-button {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.875rem;
+  height: 64px;
+  background: var(--button);
+  opacity: 0.5;
+  border-radius: 20px;
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  opacity: 1;
+}
+
+.login-card .button-back {
+  background: var(--color-secondary);
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.login-card .button-back:hover {
+  background: var(--color-primary);
+}
