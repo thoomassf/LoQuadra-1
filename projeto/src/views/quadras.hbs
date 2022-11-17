@@ -57,12 +57,12 @@
             <span>Dashboard</span>
         </a>
 
-        <a href="#abrirModal" class="create-quadra">
+        {{!-- <a href="#abrirModal" class="create-quadra">
             <img src="/images/plus.svg" alt="Criar quadra">
-        </a>
+        </a> --}}
     </div>
 
-    <div id="abrirModal" class="modal">
+    {{!-- <div id="abrirModal" class="modal">
         <a href="#fechar" title="Fechar" class="fechar">x</a>
         <form action="modal" method="POST" >
             <legend>Apenas administradores podem cadastrar quadras</legend>
@@ -72,7 +72,21 @@
             </div>
             <button type="submit" class="primary-button">Acessar</button>
         </form>
-    </div>
+    </div> --}}
+
+    <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "dff59b6c-d138-4f44-900d-bb8eb4bf4ea7", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "4049ed3d-8065-4916-ab99-18dd1c6145cc", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
 
     <script src="/scripts/page-quadras.js"></script>
 </body>
